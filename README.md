@@ -1,3 +1,9 @@
+CHECK 1 Créer une app react
+CHECK 2 S'assurer que l'app fonctionne > npm start > localhost:3000
+CHECK 3 Envoyer l'app sur github via GIT
+4 Finaliser la 1ère leçon
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
