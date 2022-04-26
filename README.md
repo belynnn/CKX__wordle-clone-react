@@ -1,8 +1,8 @@
 # ROADMAP
-### CHECK 1 Créer une app react > npx create-react-app my-app > cd my-app
-### CHECK 2 S'assurer que l'app fonctionne > npm start > localhost:3000
-### CHECK 3 Envoyer l'app sur github via GIT
-### CHECK 4 Finaliser la 1ère leçon
+CHECK 1 Créer une app react > npx create-react-app my-app > cd my-app
+CHECK 2 S'assurer que l'app fonctionne > npm start > localhost:3000
+CHECK 3 Envoyer l'app sur github via GIT
+CHECK 4 Finaliser la 1ère leçon
 
 # DONNEES QUE L'ON DOIT TRAQUER
 ## Mots trouvés
