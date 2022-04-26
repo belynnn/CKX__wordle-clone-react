@@ -3,6 +3,7 @@
 - CHECK 2 S'assurer que l'app fonctionne > npm start > localhost:3000
 - CHECK 3 Envoyer l'app sur github via GIT
 - CHECK 4 Finaliser la 1ère leçon
+- 5 Finaliser la 2è leçon
 
 # DONNEES QUE L'ON DOIT TRAQUER
 ## Mots trouvés
@@ -22,30 +23,29 @@
 ## Nombre de tours
 - un int 0 - 6
 
-
 # PROCESSUS DU JEU
 ## Entrer un mot
-l'utilisateur entre une lettre et un carré affiche cette lettre
-quand un utilisateur appuie sur "delete", cela supprime la dernière lettre entrée
-quand un utilisateur appuie sur "enter", cela envoi le mot entré
--- si tout les carrés n'ont pas reçu de lettres attribuées, le mot n'est pas envoyé
--- si le mot a déjà été utilisé lors d'un précédent tour, alors le mot n'est pas envoyé
+- l'utilisateur entre une lettre et un carré affiche cette lettre
+- quand un utilisateur appuie sur "delete", cela supprime la dernière lettre entrée
+- quand un utilisateur appuie sur "enter", cela envoi le mot entré
+- -- si tout les carrés n'ont pas reçu de lettres attribuées, le mot n'est pas envoyé
+- -- si le mot a déjà été utilisé lors d'un précédent tour, alors le mot n'est pas envoyé
 
 ## Vérifier le mot proposé
-chaque lettre est vérifiée pour voir si cela match avec la solution
-chaque lettre est assignée à une couleur basée sur son inclusion dans la solution
--- une position correct dans la solution = vert
--- dans la solution mais n'a pas de correcte position = jaune
--- pas dans la solution = gris
-les lettres trouvées sont ajoutés à la grille avec les couleurs assignées
-le prochain tour à deviner bouge à la prochaine ligne de la grille
-les lettres du claviers sont mises à jour (couleurs)
+- chaque lettre est vérifiée pour voir si cela match avec la solution
+- chaque lettre est assignée à une couleur basée sur son inclusion dans la solution
+- -- une position correct dans la solution = vert
+- -- dans la solution mais n'a pas de correcte position = jaune
+- -- pas dans la solution = gris
+- les lettres trouvées sont ajoutés à la grille avec les couleurs assignées
+- le prochain tour à deviner bouge à la prochaine ligne de la grille
+- les lettres du claviers sont mises à jour (couleurs)
 
 ## Fin du jeu
-Quand le mot deviné correspond entièrement à la solution
--- 'well done'
-Quand l'utilisateur n'a pas assez de tours
--- 'unlucky'
+- Quand le mot deviné correspond entièrement à la solution
+- -- 'well done'
+- Quand l'utilisateur n'a pas assez de tours
+- -- 'unlucky'
 
 # Getting Started with Create React App
 
