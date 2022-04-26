@@ -1,26 +1,26 @@
 # ROADMAP
-CHECK 1 Créer une app react > npx create-react-app my-app > cd my-app
-CHECK 2 S'assurer que l'app fonctionne > npm start > localhost:3000
-CHECK 3 Envoyer l'app sur github via GIT
-CHECK 4 Finaliser la 1ère leçon
+- CHECK 1 Créer une app react > npx create-react-app my-app > cd my-app
+- CHECK 2 S'assurer que l'app fonctionne > npm start > localhost:3000
+- CHECK 3 Envoyer l'app sur github via GIT
+- CHECK 4 Finaliser la 1ère leçon
 
 # DONNEES QUE L'ON DOIT TRAQUER
 ## Mots trouvés
-5 lettres, comme 'drain'
+- 5 lettres, comme 'drain'
 
 ## Mots essayés
-un array de chaque mots essayés
-chaque mot essayé est un array de lettres objets [{d},{r},{a},{i},{n}]
-chaque objet représente une lettre du mot à trouver {key: 'a', color: 'yellow'}
+- un array de chaque mots essayés
+- chaque mot essayé est un array de lettres objets [{d},{r},{a},{i},{n}]
+- chaque objet représente une lettre du mot à trouver {key: 'a', color: 'yellow'}
 
 ## Mot essayé actuellement
-string 'radio'
+- string 'radio'
 
 ## Lettre du clavier
-array des lettres objets [{key: 'r', color: 'yellow'},{key: 'a', color: 'yellow'},{key: 'd', color: 'grey'},{key: 'i', color: 'green'},{key: 'o', color: 'grey'}]
+- array des lettres objets [{key: 'r', color: 'yellow'},{key: 'a', color: 'yellow'},{key: 'd', color: 'grey'},{key: 'i', color: 'green'},{key: 'o', color: 'grey'}]
 
 ## Nombre de tours
-un int 0 - 6
+- un int 0 - 6
 
 
 # PROCESSUS DU JEU
