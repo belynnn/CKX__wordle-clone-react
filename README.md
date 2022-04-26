@@ -47,6 +47,11 @@
 - Quand l'utilisateur n'a pas assez de tours
 - -- 'unlucky'
 
+# Solution pour les données
+- 1 - API
+- 2 - acquérir une base de donnée
+- 3 - fichier json
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
