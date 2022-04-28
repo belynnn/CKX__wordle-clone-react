@@ -2,13 +2,17 @@
 - ✔️ Créer une app react > npx create-react-app my-app > cd my-app
 - ✔️ S'assurer que l'app fonctionne > npm start > localhost:3000
 - ✔️ Envoyer l'app sur github via GIT
-- ✔️ Finaliser la 1ère leçon - Introduction, roadmap, paramètrer l'app React, repo+remote git
-- ✔️ Finaliser la 2è leçon - Utiliser JSON server (accéder à db.json qui contient toute nos solutions)
-- ✔️ Finaliser la 3è leçon - Créer un hook Worlde (squelette)
-- ✔️ Finaliser la 4è leçon - Traquer l'essai actuel (regex + Backspace)
-- ✔️ Finaliser la 5è leçon - Gérer l'envoi des essais (Enter + conditions (5 lettres de long, doublons, 5 essais uniquement))
-- ✔️ Finaliser la 6è leçon - Vérifier et formater les essais
-- Finaliser la 7è leçon
+- ✔️ Finaliser la 1ère leçon - (branch master) - Introduction, roadmap, paramètrer l'app React, repo+remote git
+- ✔️ Finaliser la 2è leçon - (branch master) - Utiliser JSON server (accéder à db.json qui contient toute nos solutions)
+- ✔️ Finaliser la 3è leçon - (branch second-day) - Créer un hook Worlde (squelette)
+- ✔️ Finaliser la 4è leçon - (branch second-day) - Traquer l'essai actuel (regex + Backspace)
+- ✔️ Finaliser la 5è leçon - (branch second-day) - Gérer l'envoi des essais (Enter + conditions (5 lettres de long, doublons, 5 essais uniquement))
+- ✔️ Finaliser la 6è leçon - (branch second-day) - Vérifier et formater les essais
+- Finaliser la 7è leçon (branch third-day)
+- Créer la branch first-day
+- Retourner au dernier commit de la branch master
+- Checkout sur la branch first-day pour y push la branch master
+- Merge l'entièreté des branch à la branch master
 
 ## DONNEES QUE L'ON DOIT TRAQUER
 ### Mots trouvés
