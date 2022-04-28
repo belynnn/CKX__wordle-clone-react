@@ -4,13 +4,36 @@ const useWordle = (solution) => {
     const [turn, setTurn] = useState(0) // si l'utilisateur arrive à 5 essais, game over
     const [currentGuess, setCurrentGuess] = useState('') // traque ce que l'utilisateur est en train de taper, à chaque nouvelle touche
     const [guesses, setGuesses] = useState([]) // chaque essai est un array
-    const [history, setHistory] = useState(['hello', 'ninja']) // chaque essai est un string, sert à gérer les doublons (si l'utilisateur entre un mot déjà entré)
+    const [history, setHistory] = useState([]) // chaque essai est un string, sert à gérer les doublons (si l'utilisateur entre un mot déjà entré)
     const [isCorrect, setIsCorrect] = useState(false) // true quand l'utilisateur gagne
 
     // formatte l'essai entré en array, où chaque lettre sera un objet
     // [{key: 'drain', color: 'green'}]
     const formatGuess = () => {
-        console.log("Mise en forme de l'essaie - ", currentGuess)
+        // console.log("Mise en forme de l'essaie - ", currentGuess) // leçon 5
+        let solutionArray = [...solution] // spread syntax ? Syntaxe de décomposition https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+        let formattedGuess = [...currentGuess].map((l) => { // l = letters
+
+            return {key: l, color: 'grey'} // chaque lettres a maintenant 2 propriétés, la touche et sa couleur. Gris par défaut, on mettra jaune et vert par après
+        })
+
+        // Trouvé s'il y a des lettres vertes
+        formattedGuess.forEach((l, i) => {
+            if (solutionArray[i] === l.key) {
+                formattedGuess[i].color = 'green'
+                solutionArray[i] = null
+            }
+        })
+
+        // Trouvé s'il y a des lettres jaunes
+        formattedGuess.forEach((l, i) => {
+            if (solutionArray.includes(l.key) && l.color !== 'green') {
+                formattedGuess[i].color = 'yellow'
+                solutionArray[solutionArray.indexOf(l.key)] = null
+            }
+        })
+
+        return formattedGuess
     }
 
     // ajoute un nouvel essai à guesses et history
@@ -43,7 +66,8 @@ const useWordle = (solution) => {
                 return
             }
 
-            formatGuess(currentGuess)
+            const formatted = formatGuess()
+            console.log(formatted)
         }
         if (key === 'Backspace') {
             setCurrentGuess((prev) => {
