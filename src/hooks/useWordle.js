@@ -24,6 +24,12 @@ const useWordle = (solution) => {
     // si l'utilisateur appuie sur Enter, ajoute le nouvel essai (addNewGuess)
     const handleKeyup = ({ key }) => {
 
+        if (key === 'Backspace') {
+            setCurrentGuess((prev) => {
+                return prev.slice(0, -1) // supprime la dernière lettre
+            })
+            return
+        }
         // regex - être sûr que l'utilisateur n'envoi que des lettres et non pas les touches "shift", "delete", etc
         if (/^[A-Za-z]$/.test(key)) {
             // gestion de la longueur des mots
