@@ -1,12 +1,12 @@
 # ROADMAP perso
-- CHECK Créer une app react > npx create-react-app my-app > cd my-app
-- CHECK S'assurer que l'app fonctionne > npm start > localhost:3000
-- CHECK Envoyer l'app sur github via GIT
-- CHECK Finaliser la 1ère leçon
-- CHECK Finaliser la 2è leçon
-- CHECK Finaliser la 3è leçon
-- CHECK Finaliser la 4è leçon
-- Finaliser la 5è leçon
+- ✔️ Créer une app react > npx create-react-app my-app > cd my-app
+- ✔️ S'assurer que l'app fonctionne > npm start > localhost:3000
+- ✔️ Envoyer l'app sur github via GIT
+- ✔️ Finaliser la 1ère leçon - Introduction, roadmap, paramètrer l'app React, repo+remote git
+- ✔️ Finaliser la 2è leçon - Utiliser JSON server (accéder à db.json qui contient toute nos solutions)
+- ✔️ Finaliser la 3è leçon - Créer un hook Worlde (squelette)
+- ✔️ Finaliser la 4è leçon - Traquer l'essai actuel (regex + Backspace)
+- ✔️ Finaliser la 5è leçon - Gérer l'envoi des essais (Enter + conditions (5 lettres de long, doublons, 5 essais uniquement))
 - Finaliser la 6è leçon
 - Finaliser la 7è leçon
 
