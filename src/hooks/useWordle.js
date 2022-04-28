@@ -1,16 +1,16 @@
 import { useState } from 'react'
 
 const useWordle = (solution) => {
-    const [turn, setTurn] = useState(0) // si l'utilisateur arrive à 6 essai, game over
+    const [turn, setTurn] = useState(0) // si l'utilisateur arrive à 5 essais, game over
     const [currentGuess, setCurrentGuess] = useState('') // traque ce que l'utilisateur est en train de taper, à chaque nouvelle touche
     const [guesses, setGuesses] = useState([]) // chaque essai est un array
-    const [history, setHistory] = useState([]) // chaque essai est un string, sert à gérer les doublons (si l'utilisateur entre un mot déjà entré)
+    const [history, setHistory] = useState(['hello', 'ninja']) // chaque essai est un string, sert à gérer les doublons (si l'utilisateur entre un mot déjà entré)
     const [isCorrect, setIsCorrect] = useState(false) // true quand l'utilisateur gagne
 
     // formatte l'essai entré en array, où chaque lettre sera un objet
     // [{key: 'drain', color: 'green'}]
     const formatGuess = () => {
-
+        console.log("Mise en forme de l'essaie - ", currentGuess)
     }
 
     // ajoute un nouvel essai à guesses et history
@@ -23,7 +23,28 @@ const useWordle = (solution) => {
     // gère les touches enfoncées par l'utilisasteur et traque l'essaie entré actuel
     // si l'utilisateur appuie sur Enter, ajoute le nouvel essai (addNewGuess)
     const handleKeyup = ({ key }) => {
+        if (key === 'Enter') {
+            // uniquement ajouté l'essai si 'turn' est plus petit que 5
+            if (turn > 5) {
+                console.log('Vous avez utilisé tout vos essais')
 
+                return
+            }
+            // ne pas autorisé les doublons
+            if (history.includes(currentGuess)) {
+                console.log('Vous avez déjà essayé ce mot')
+
+                return
+            }
+            // vérifié si le mot a bien 5 lettres de long
+            if (currentGuess.length !== 5) {
+                console.log('Vous devez entrer un mot de 5 lettres')
+
+                return
+            }
+
+            formatGuess(currentGuess)
+        }
         if (key === 'Backspace') {
             setCurrentGuess((prev) => {
                 return prev.slice(0, -1) // supprime la dernière lettre
