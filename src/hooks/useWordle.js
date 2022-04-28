@@ -23,7 +23,16 @@ const useWordle = (solution) => {
     // gère les touches enfoncées par l'utilisasteur et traque l'essaie entré actuel
     // si l'utilisateur appuie sur Enter, ajoute le nouvel essai (addNewGuess)
     const handleKeyup = ({ key }) => {
-        console.log(key)
+
+        // regex - être sûr que l'utilisateur n'envoi que des lettres et non pas les touches "shift", "delete", etc
+        if (/^[A-Za-z]$/.test(key)) {
+            // gestion de la longueur des mots
+            if (currentGuess.length < 5) { // erreur: j'avais écris "lenght"... corrigé et fonctionnel !
+                setCurrentGuess((prev) => {
+                    return prev + key
+                })
+            }
+        }
     }
 
     return {turn, currentGuess, guesses, isCorrect, handleKeyup} // erreur: j'avais écris "isCorrectState", corrigé
