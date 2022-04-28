@@ -22,11 +22,11 @@ const useWordle = (solution) => {
 
     // gère les touches enfoncées par l'utilisasteur et traque l'essaie entré actuel
     // si l'utilisateur appuie sur Enter, ajoute le nouvel essai (addNewGuess)
-    const handleKeyUp = () => {
-
+    const handleKeyup = ({ key }) => {
+        console.log(key)
     }
 
-    return {turn, currentGuess, guesses, isCorrectState, handleKeyUp}
+    return {turn, currentGuess, guesses, isCorrect, handleKeyup} // erreur: j'avais écris "isCorrectState", corrigé
 
 }
 
