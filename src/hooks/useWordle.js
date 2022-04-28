@@ -66,6 +66,7 @@ const useWordle = (solution) => {
                 return
             }
 
+            // formatGuess(currentGuess) // leçon 5
             const formatted = formatGuess()
             console.log(formatted)
         }

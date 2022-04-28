@@ -7,7 +7,7 @@
 - ✔️ Finaliser la 3è leçon - Créer un hook Worlde (squelette)
 - ✔️ Finaliser la 4è leçon - Traquer l'essai actuel (regex + Backspace)
 - ✔️ Finaliser la 5è leçon - Gérer l'envoi des essais (Enter + conditions (5 lettres de long, doublons, 5 essais uniquement))
-- Finaliser la 6è leçon
+- ✔️ Finaliser la 6è leçon - Vérifier et formater les essais
 - Finaliser la 7è leçon
 
 ## DONNEES QUE L'ON DOIT TRAQUER
