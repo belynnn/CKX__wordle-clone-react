@@ -5,6 +5,9 @@ export default function Grid({ currentGuess, guesses, turn }) { // erreur: j'ava
     return (
         <div>
             {guesses.map((g, i) => { // g = guesses, i = index
+                if (turn === i) {
+                    return <Row key={i} currentGuess={currentGuess} />
+                }
                 return <Row key={i} guess={g} />
             })}
         </div>

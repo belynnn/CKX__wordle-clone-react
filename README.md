@@ -11,7 +11,8 @@
 - ✔️ Finaliser la 7è leçon (branch third-day) - Ajouter les nouveaux essais dans l'array d'objet (chaque lettres + sa couleur) + l'historique d'array string + compteur d'essais
 - ✔️ Finaliser la 8è leçon (branch third-day) - Créer la grille du jeu en créant un composant "grid" pour la grille de 6 essais et un composant "row" pour chaque ligne contenant 5 lettres
 - ✔️ Finaliser la 9è leçon (branch third-day) - Afficher les mots essayés dans la grille, appliquer la bonne couleur aux lettres
--  Finaliser la 10è leçon (branch third-day)
+- ✔️ Finaliser la 10è leçon (branch third-day) - Afficher les mots EN TRAIN d'être essayés en gardant le bon nombre de carré
+-  Finaliser la 11è leçon (branch third-day) - 
 - Créer la branch first-day
 - Retourner au dernier commit du first-day de la branch master
 - Checkout sur la branch first-day pour y push la branch master
