@@ -3,7 +3,7 @@ import { useState } from 'react'
 const useWordle = (solution) => {
     const [turn, setTurn] = useState(0) // si l'utilisateur arrive à 5 essais, game over
     const [currentGuess, setCurrentGuess] = useState('') // traque ce que l'utilisateur est en train de taper, à chaque nouvelle touche
-    const [guesses, setGuesses] = useState([]) // chaque essai est un array
+    const [guesses, setGuesses] = useState([...Array(6)]) // chaque essai est un array d'objets
     const [history, setHistory] = useState([]) // chaque essai est un string, sert à gérer les doublons (si l'utilisateur entre un mot déjà entré)
     const [isCorrect, setIsCorrect] = useState(false) // true quand l'utilisateur gagne
 
@@ -37,10 +37,24 @@ const useWordle = (solution) => {
     }
 
     // ajoute un nouvel essai à guesses et history
-    // met à jour l'isCorrect si l'essai est corrent
+    // met à jour l'isCorrect si l'essai est correct
     // ajoute 1 au state de turn
-    const addNewGuess = () => {
-
+    const addNewGuess = (formattedGuess) => {
+        if (currentGuess === solution) {
+            setIsCorrect(true)
+        }
+        setGuesses((prevGuesses) => {
+            let newGuesses = [...prevGuesses]
+            newGuesses[turn] = formattedGuess
+            return newGuesses
+        })
+        setHistory((prevHistory) => {
+            return [...prevHistory, currentGuess]
+        })
+        setTurn((prevTurn) => {
+            return prevTurn + 1
+        })
+        setCurrentGuess('')
     }
 
     // gère les touches enfoncées par l'utilisasteur et traque l'essaie entré actuel
@@ -62,13 +76,14 @@ const useWordle = (solution) => {
             // vérifié si le mot a bien 5 lettres de long
             if (currentGuess.length !== 5) {
                 console.log('Vous devez entrer un mot de 5 lettres')
-
                 return
             }
 
             // formatGuess(currentGuess) // leçon 5
             const formatted = formatGuess()
-            console.log(formatted)
+            // console.log(formatted)  // leçon 6
+            addNewGuess(formatted)
+
         }
         if (key === 'Backspace') {
             setCurrentGuess((prev) => {
