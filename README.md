@@ -8,7 +8,10 @@
 - ✔️ Finaliser la 4è leçon - (branch second-day) - Traquer l'essai actuel (regex + Backspace)
 - ✔️ Finaliser la 5è leçon - (branch second-day) - Gérer l'envoi des essais (Enter + conditions (5 lettres de long, doublons, 5 essais uniquement))
 - ✔️ Finaliser la 6è leçon - (branch second-day) - Vérifier et formater les essais
-- Finaliser la 7è leçon (branch third-day)
+- ✔️ Finaliser la 7è leçon (branch third-day) - Ajouter les nouveaux essais dans l'array d'objet (chaque lettres + sa couleur) + l'historique d'array string + compteur d'essais
+- ✔️ Finaliser la 8è leçon (branch third-day) - Créer la grille du jeu en créant un composant "grid" pour la grille de 6 essais et un composant "row" pour chaque ligne contenant 5 lettres
+-  Finaliser la 9è leçon (branch third-day)
+-  Finaliser la 10è leçon (branch third-day)
 - Créer la branch first-day
 - Retourner au dernier commit de la branch master
 - Checkout sur la branch first-day pour y push la branch master

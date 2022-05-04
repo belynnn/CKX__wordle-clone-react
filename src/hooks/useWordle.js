@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const useWordle = (solution) => {
-    const [turn, setTurn] = useState(0) // si l'utilisateur arrive à 5 essais, game over
+    const [turn, setTurn] = useState(0) // si l'utilisateur arrive à 6 essais, game over
     const [currentGuess, setCurrentGuess] = useState('') // traque ce que l'utilisateur est en train de taper, à chaque nouvelle touche
     const [guesses, setGuesses] = useState([...Array(6)]) // chaque essai est un array d'objets
     const [history, setHistory] = useState([]) // chaque essai est un string, sert à gérer les doublons (si l'utilisateur entre un mot déjà entré)
